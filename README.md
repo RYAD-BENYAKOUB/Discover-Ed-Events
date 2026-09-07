@@ -172,7 +172,3 @@ discover-ed-event/
 © 2026 Discover Ed Events — Fellahi Yasmine. All rights reserved.
 
 ---
-
-<p align="center">
-  Made with ❤️ in Algeria
-</p>
