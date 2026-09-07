@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Simple leaf/compass icon for Discover Ed Event -->
+  <circle cx="16" cy="16" r="15" fill="#F3EFE7" stroke="#B97A5D" stroke-width="1.5"/>
+  <text x="16" y="21" text-anchor="middle" font-family="serif" font-size="16" font-weight="bold" fill="#2E3B4E">D</text>
+</svg>

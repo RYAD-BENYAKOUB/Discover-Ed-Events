@@ -1,0 +1,95 @@
+/* ============================================
+   Discover Ed Events — Global Styles
+   Tailwind CSS v4 with @theme for brand tokens
+   ============================================ */
+
+@import "tailwindcss";
+
+/* ----- Google Fonts (loaded via index.html <link>) ----- */
+
+/* ----- Brand Design Tokens ----- */
+@theme {
+  /* Colors */
+  --color-cream: #F3EFE7;
+  --color-navy: #2E3B4E;
+  --color-blush: #EBC3B8;
+  --color-terracotta: #B97A5D;
+  --color-mauve: #B6988A;
+  --color-beige: #D9CDBB;
+
+  /* Font Families */
+  --font-script: 'Alex Brush', cursive;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Custom Animations */
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-fade-in-left: fadeInLeft 0.8s ease-out forwards;
+  --animate-fade-in-right: fadeInRight 0.8s ease-out forwards;
+}
+
+/* ----- Animation Keyframes ----- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ----- Base Styles ----- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-navy);
+  background-color: var(--color-cream);
+}
+
+/* ----- ScrollReveal: hidden by default, revealed on intersection ----- */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
