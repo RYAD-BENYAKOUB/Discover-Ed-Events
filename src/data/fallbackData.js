@@ -10,6 +10,7 @@ const fallbackExperiences = [
   {
     id: 1,
     title: 'Randonnée au Djurdjura',
+    category: 'Hikes',
     date: '15 Mars 2025',
     location: 'Tikjda, Bouira',
     description:
@@ -25,6 +26,7 @@ const fallbackExperiences = [
   {
     id: 2,
     title: 'Excursion à Tipaza',
+    category: 'Guided Tours',
     date: '28 Avril 2025',
     location: 'Tipaza',
     description:
@@ -39,6 +41,7 @@ const fallbackExperiences = [
   {
     id: 3,
     title: 'Trekking à Chréa',
+    category: 'Hikes',
     date: '10 Juin 2025',
     location: 'Parc National de Chréa, Blida',
     description:
@@ -53,6 +56,7 @@ const fallbackExperiences = [
   {
     id: 4,
     title: 'Découverte du Sahara',
+    category: 'Immersive Stays',
     date: '22 Septembre 2025',
     location: 'Timimoun, Adrar',
     description:
@@ -68,6 +72,7 @@ const fallbackExperiences = [
   {
     id: 5,
     title: 'Les Gorges de Tighza',
+    category: 'Hikes',
     date: '5 Novembre 2025',
     location: 'Béjaïa',
     description:
@@ -83,6 +88,7 @@ const fallbackExperiences = [
   {
     id: 6,
     title: 'Côte Turquoise de Jijel',
+    category: 'Guided Tours',
     date: '18 Décembre 2025',
     location: 'Jijel',
     description:
@@ -97,6 +103,7 @@ const fallbackExperiences = [
   {
     id: 7,
     title: 'Ascension du Mont Tahat',
+    category: 'Bivouac',
     date: '8 Janvier 2026',
     location: 'Hoggar, Tamanrasset',
     description:
@@ -112,6 +119,7 @@ const fallbackExperiences = [
   {
     id: 8,
     title: 'Oasis de Ghardaïa',
+    category: 'Guided Tours',
     date: '20 Février 2026',
     location: 'Ghardaïa, M\'zab',
     description:
