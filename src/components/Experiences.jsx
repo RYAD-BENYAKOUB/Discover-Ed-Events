@@ -18,12 +18,9 @@ import fallbackExperiences from '../data/fallbackData';
 const ITEMS_PER_PAGE = 6;
 const CATEGORIES = [
   'All',
-  'Bivouac',
-  'Guided Tours',
-  'Immersive Stays',
   'Events',
-  'Hikes',
-  'Therapeutic Sessions'
+  'Guided Tours',
+  'Training',
 ];
 
 /* ---- Decorative: dotted travel route line (between cards on desktop) ---- */
