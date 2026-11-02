@@ -3,21 +3,28 @@
  * -------
  * Main application component.
  * Assembles all sections in order:
+ * 0. Sticky Navigation Bar
  * 1. Hero / header
  * 2. About / bio
- * 3. Experiences (data-driven, paginated)
- * 4. Contact / social footer
+ * 3. Services (offerings & psychological dimensions)
+ * 4. Experiences (data-driven, paginated)
+ * 5. Contact / social footer
  */
 
-import React from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import Experiences from './components/Experiences';
-import Contact from './components/Contact';
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Services from "./components/Services";
+import Experiences from "./components/Experiences";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-cream">
+      {/* ---- Navigation Bar ---- */}
+      <Navbar />
+
       {/* ---- 1. Hero / Header ---- */}
       <Hero />
 
@@ -30,10 +37,16 @@ export default function App() {
       {/* ---- Decorative section divider ---- */}
       <div className="h-px bg-gradient-to-r from-transparent via-beige to-transparent" />
 
-      {/* ---- 3. Experiences ---- */}
+      {/* ---- 3. Services ---- */}
+      <Services />
+
+      {/* ---- Decorative section divider ---- */}
+      <div className="h-px bg-gradient-to-r from-transparent via-beige to-transparent" />
+
+      {/* ---- 4. Experiences ---- */}
       <Experiences />
 
-      {/* ---- 4. Contact / Footer ---- */}
+      {/* ---- 5. Contact / Footer ---- */}
       <Contact />
     </div>
   );

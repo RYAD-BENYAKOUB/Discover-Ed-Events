@@ -8,23 +8,28 @@
  * - No external carousel library
  */
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback } from "react";
 
-export default function Carousel({ images = [], title = 'Experience' }) {
+export default function Carousel({ images = [], title = "Experience" }) {
   const [current, setCurrent] = useState(0);
   const touchStart = useRef(null);
   const touchEnd = useRef(null);
 
   const count = images.length;
-  if (count === 0) return null;
 
   /* ---- Navigation ---- */
-  const goTo = useCallback((index) => {
-    setCurrent((index + count) % count);
-  }, [count]);
+  const goTo = useCallback(
+    (index) => {
+      if (count === 0) return;
+      setCurrent((index + count) % count);
+    },
+    [count],
+  );
 
   const prev = () => goTo(current - 1);
   const next = () => goTo(current + 1);
+
+  if (count === 0) return null;
 
   /* ---- Touch / swipe handling ---- */
   const minSwipeDistance = 50;
@@ -42,7 +47,11 @@ export default function Carousel({ images = [], title = 'Experience' }) {
     if (touchStart.current === null || touchEnd.current === null) return;
     const distance = touchStart.current - touchEnd.current;
     if (Math.abs(distance) >= minSwipeDistance) {
-      distance > 0 ? next() : prev();
+      if (distance > 0) {
+        next();
+      } else {
+        prev();
+      }
     }
     touchStart.current = null;
     touchEnd.current = null;
@@ -83,8 +92,18 @@ export default function Carousel({ images = [], title = 'Experience' }) {
                        hover:bg-cream text-navy shadow-md"
             aria-label="Photo précédente"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 19l-7-7 7-7"
+              />
             </svg>
           </button>
           <button
@@ -96,8 +115,18 @@ export default function Carousel({ images = [], title = 'Experience' }) {
                        hover:bg-cream text-navy shadow-md"
             aria-label="Photo suivante"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5l7 7-7 7"
+              />
             </svg>
           </button>
         </>
@@ -112,8 +141,8 @@ export default function Carousel({ images = [], title = 'Experience' }) {
               onClick={() => goTo(i)}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
                 i === current
-                  ? 'bg-terracotta w-5'
-                  : 'bg-cream/60 hover:bg-cream/90'
+                  ? "bg-terracotta w-5"
+                  : "bg-cream/60 hover:bg-cream/90"
               }`}
               aria-label={`Aller à la photo ${i + 1}`}
             />

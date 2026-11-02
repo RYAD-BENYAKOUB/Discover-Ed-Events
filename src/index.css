@@ -10,16 +10,16 @@
 /* ----- Brand Design Tokens ----- */
 @theme {
   /* Colors */
-  --color-cream: #F3EFE7;
-  --color-navy: #2E3B4E;
-  --color-blush: #EBC3B8;
-  --color-terracotta: #B97A5D;
-  --color-mauve: #B6988A;
-  --color-beige: #D9CDBB;
+  --color-cream: #f3efe7;
+  --color-navy: #2e3b4e;
+  --color-blush: #ebc3b8;
+  --color-terracotta: #b97a5d;
+  --color-mauve: #b6988a;
+  --color-beige: #d9cdbb;
 
   /* Font Families */
-  --font-script: 'Alex Brush', cursive;
-  --font-body: 'Poppins', sans-serif;
+  --font-script: "Alex Brush", cursive;
+  --font-body: "Poppins", sans-serif;
 
   /* Custom Animations */
   --animate-fade-in: fadeIn 0.8s ease-out forwards;
@@ -74,6 +74,7 @@
 /* ----- Base Styles ----- */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -86,7 +87,9 @@ body {
 .scroll-hidden {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
 }
 
 .scroll-visible {
@@ -102,7 +105,7 @@ body {
   }
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }

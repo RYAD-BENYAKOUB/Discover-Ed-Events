@@ -12,8 +12,8 @@
  * - Botanical leaf SVG kept as a single decorative touch (top-right corner).
  */
 
-import React from 'react';
-import logoSrc from '../assets/DEE.png';
+import React from "react";
+import logoSrc from "../assets/DEE.png";
 
 /* ---- Decorative: thin botanical leaf (top-right corner) ---- */
 function BotanicalLeaf() {
@@ -68,11 +68,12 @@ function BotanicalLeafMirror() {
 export default function Hero() {
   return (
     <section
-      id="hero"
+      id="home"
       className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden"
       /* Soft radial gradient background — cream center fading to warm beige edges */
       style={{
-        background: 'radial-gradient(ellipse at 50% 40%, #F3EFE7 0%, #EBE4D8 55%, #D9CDBB 100%)',
+        background:
+          "radial-gradient(ellipse at 50% 40%, #F3EFE7 0%, #EBE4D8 55%, #D9CDBB 100%)",
       }}
     >
       {/* Decorative leaves */}
@@ -81,12 +82,11 @@ export default function Hero() {
 
       {/* ====== Main content ====== */}
       <div className="text-center flex flex-col items-center max-w-2xl">
-
         {/* ---- Logo medallion ---- */}
         {/* Dark backdrop circle so the illustrated portrait doesn't clash with cream */}
         <div
           className="mb-6 animate-fade-in"
-          style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
+          style={{ animationDelay: "0.1s", animationFillMode: "both" }}
         >
           <div className="relative inline-block">
             {/* Outer decorative ring */}
@@ -111,7 +111,7 @@ export default function Hero() {
         <h1
           className="font-script text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-navy leading-tight mb-3
                      animate-fade-in-up"
-          style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
+          style={{ animationDelay: "0.3s", animationFillMode: "both" }}
         >
           Discover Ed Events
         </h1>
@@ -120,19 +120,22 @@ export default function Hero() {
         <p
           className="text-base sm:text-lg md:text-xl text-navy/65 font-light mb-1.5
                      animate-fade-in-up"
-          style={{ animationDelay: '0.5s', animationFillMode: 'both' }}
+          style={{ animationDelay: "0.5s", animationFillMode: "both" }}
         >
-          by <span className="font-medium text-terracotta">Fellahi Yasmine</span>
+          by{" "}
+          <span className="font-medium text-terracotta">Fellahi Yasmine</span>
         </p>
 
         {/* ---- Role subtitle ---- */}
         <p
           className="text-sm sm:text-base text-navy/50 font-light tracking-wide max-w-md mx-auto mb-10
                      animate-fade-in-up"
-          style={{ animationDelay: '0.65s', animationFillMode: 'both' }}
+          style={{ animationDelay: "0.65s", animationFillMode: "both" }}
         >
           {/* Full title on sm+, shorter on mobile */}
-          <span className="hidden sm:inline">Educational &amp; Touristic Outing Project Manager</span>
+          <span className="hidden sm:inline">
+            Educational &amp; Touristic Outing Project Manager
+          </span>
           <span className="sm:hidden">Tourism &amp; Event Project Manager</span>
         </p>
 
@@ -144,7 +147,7 @@ export default function Hero() {
                      transition-all duration-300 hover:bg-terracotta/90 hover:shadow-lg
                      hover:-translate-y-0.5 active:translate-y-0
                      animate-fade-in-up"
-          style={{ animationDelay: '0.85s', animationFillMode: 'both' }}
+          style={{ animationDelay: "0.85s", animationFillMode: "both" }}
         >
           Contactez-moi
         </a>
@@ -154,7 +157,7 @@ export default function Hero() {
       <div
         className="absolute bottom-8 flex flex-col items-center
                    animate-fade-in"
-        style={{ animationDelay: '1.2s', animationFillMode: 'both' }}
+        style={{ animationDelay: "1.2s", animationFillMode: "both" }}
       >
         <span className="text-[10px] text-navy/40 mb-2 tracking-[0.25em] uppercase font-medium">
           Scroll

@@ -150,9 +150,9 @@ export default function Contact() {
         <ScrollReveal>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-12">
             <ContactLink
-              href="mailto:fellahiyasmine1993@gmail.com"
+              href="mailto:dedevents213@gmail.com"
               icon={<EmailIcon />}
-              label="fellahiyasmine1993@gmail.com"
+              label="dedevents213@gmail.com"
               sublabel="Email"
             />
             <ContactLink
